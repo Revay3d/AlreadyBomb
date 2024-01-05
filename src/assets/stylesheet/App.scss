@@ -1,0 +1,140 @@
+:root {
+  --colorPrimario: #ffff00;
+  --colorPrimarioOscuro: #d9dd00;
+  --colorFondo: #141414;
+  --colorFondoOscuro: #252525;
+}
+
+* {
+  color: #ffff;
+}
+
+.Nav {
+  background: var(--colorFondo);
+  padding: 30px 70px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    font-size: 40px;
+  }
+
+  &__items {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+    & a {
+      color: #ffff;
+      font-weight: 500;
+      border-bottom: transparent 2px solid;
+      border-radius: 2px;
+      transition: 0.3s;
+
+      &:hover {
+        border-color: var(--colorPrimario);
+        color: #ffffffec;
+      }
+    }
+
+    &__button {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+
+      & span {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  &__menu {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--colorFondoOscuro);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+
+    & i {
+      margin-top: 15px;
+    }
+  }
+}
+
+.Aviso {
+  margin: 70px 30px 0 30px;
+
+  &__title {
+    font-size: 70px;
+    margin: 4px;
+    color: transparent;
+    -webkit-text-stroke: #ffff 2px;
+  }
+
+  &__text {
+    opacity: 0.7;
+    font-weight: 400;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 918px) {
+  .Aviso {
+    margin: 70px 10px 0 10px;
+  }
+
+  .Nav {
+    padding: 30px 10px;
+  }
+  .Nav__items {
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+
+    top: 80%;
+    opacity: 0;
+    justify-content: space-evenly;
+    left: 400px;
+    right: 0;
+    padding: 20px 0;
+    background-color: var(--colorFondo);
+    width: 100%;
+    transition: 0.3s;
+
+    position: absolute;
+  }
+
+  .visible {
+    transition: 0.3s;
+    left: 0;
+    opacity: 1;
+  }
+
+  .Nav__menu {
+    display: block;
+  }
+}
+
+@media (max-width: 530px) {
+  .Nav__button {
+    display: none;
+  }
+  .Aviso__title {
+    font-size: 45px;
+  }
+}
