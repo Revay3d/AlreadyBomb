@@ -7,7 +7,7 @@
   color: rgba(255, 255, 255, 0.87);
   background: linear-gradient(15deg, #ffff00 1%,  #000000 40%) no-repeat;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,7 +29,7 @@ body {
   padding: 0;
   place-items: center;
 
-  overflow: hidden;
+  overflow-x: hidden;
  
 }
 
