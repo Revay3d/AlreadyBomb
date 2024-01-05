@@ -6,6 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background: linear-gradient(15deg, #ffff00 1%,  #000000 40%) no-repeat;
+  background-attachment: fixed;
   height: 100%;
   overflow-x: hidden;
 

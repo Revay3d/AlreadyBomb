@@ -26,7 +26,7 @@ function App() {
         </a>
 
         <span className="Nav__menu" onClick={() => setCount(!count)}>
-          <i className="fa-solid fa-bars"></i>
+          <i className={"fa-solid " + (count ? "fa-x " : " fa-bars")}></i>
         </span>
       </nav>
 
